@@ -1,0 +1,33 @@
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type=search] {
+  background: url("../img/icon-suche.svg") no-repeat 5px center;
+  padding: 5px 10px 5px 20px;
+  border: 1px solid transparent;
+  width: 15px;
+  color: transparent;
+  cursor: pointer;
+  @include transition(all .5s);
+}
+
+
+input[type=search]:hover {
+  background-color: transparent;
+}
+input[type=search]:focus {
+  width: 150px;
+  padding-left: 32px;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  cursor: auto;
+  border: 1px solid $stack-color;
+}
